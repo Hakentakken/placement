@@ -1,0 +1,188 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #f9fafb 0%, #e3e7ed 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+.dashboard-container.dark-mode {
+  background: linear-gradient(135deg, #23272f 0%, #2c333a 100%);
+  color: #e0e0e0;
+}
+
+.dashboard-title {
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 32px;
+  color: #1565c0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px rgba(21, 101, 192, 0.10);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.dashboard-container.dark-mode .dashboard-title {
+  color: #90caf9;
+  text-shadow: 0 2px 12px rgba(144, 202, 249, 0.10);
+}
+
+.mode-toggle-btn {
+  padding: 8px 18px;
+  background: linear-gradient(90deg, #1976d2 0%, #43cea2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.mode-toggle-btn:hover {
+  background: linear-gradient(90deg, #43cea2 0%, #1976d2 100%);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.dashboard-section {
+  margin-bottom: 36px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: border-color 0.3s;
+}
+.dashboard-container.dark-mode .dashboard-section {
+  border-bottom: 1px solid #444;
+}
+
+.dashboard-section:last-child {
+  border-bottom: none;
+}
+
+.dashboard-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  color: #34495e;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.dashboard-container.dark-mode .dashboard-section h3 {
+  color: #90caf9;
+}
+
+.drives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dcdfe3;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 1px 2px 12px rgba(44, 62, 80, 0.06);
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s, color 0.3s;
+  position: relative;
+  word-break: break-word;
+}
+.card:hover {
+  box-shadow: 0 4px 24px rgba(21, 101, 192, 0.12);
+  border-color: #1565c0;
+}
+.dashboard-container.dark-mode .card {
+  background-color: #2c333a;
+  border-color: #444;
+  color: #e0e0e0;
+}
+.dashboard-container.dark-mode .card:hover {
+  border-color: #90caf9;
+}
+
+.card h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  color: #1976d2;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+.dashboard-container.dark-mode .card h4 {
+  color: #90caf9;
+}
+
+.card p {
+  margin: 6px 0;
+  color: #636e72;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.dashboard-container.dark-mode .card p {
+  color: #b0bec5;
+}
+
+.btn-disabled {
+  background: linear-gradient(90deg, #bdbdbd 0%, #757575 100%);
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: not-allowed;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  opacity: 0.8;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #1976d2 0%, #43cea2 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+.nav-btn:hover, .nav-btn:focus {
+  background: linear-gradient(90deg, #43cea2 0%, #1976d2 100%);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 12px 4px;
+  }
+  .dashboard-title {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  .drives-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .card {
+    padding: 12px 8px;
+    font-size: 0.95rem;
+  }
+  .mode-toggle-btn {
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+}
